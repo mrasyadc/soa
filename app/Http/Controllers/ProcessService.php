@@ -17,6 +17,10 @@ class ProcessService extends Controller
 
     public function test() {
 //        TODO: Cari cara call api from the inside server itself
+        
+//         Best way to do it
+//         https://stackoverflow.com/questions/32847926/laravel-use-requestcreate-and-routedispatchrequest
+        
         $client = new Client(['base_uri' => 'http://localhost:8000/']);
         $response = $client->request('GET', 'thesis');
         @dd($response);
