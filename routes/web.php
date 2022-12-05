@@ -22,6 +22,9 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return redirect('/process');
 });
+
 Route::get('/process', [ProcessService::class, 'start'])->name('process');
 
+
 Route::get('/halo', [HaloService::class, 'halo']);
+
