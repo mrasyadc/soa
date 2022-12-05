@@ -1,0 +1,281 @@
+{
+	"info": {
+		"_postman_id": "401d53a4-a677-4ee8-83bf-6342095a5e8a",
+		"name": "soa",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "14115147"
+	},
+	"item": [
+		{
+			"name": "test",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8000/test",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"test"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "thesis-getAll",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8000/thesis",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"thesis"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "thesis-getById",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8000/thesis/{{thesisId}}",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"thesis",
+						"{{thesisId}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "student-getAll",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8000/students",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"students"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "student-getById",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8000/students/{{studentId}}",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"students",
+						"{{studentId}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "feedback-getByThesisId",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8000/feedback/{{thesisId}}",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"feedback",
+						"{{thesisId}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "feedback-addFeedbackByThesisId",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "X-CSRF-TOKEN",
+						"value": "ssmvEziyoqYP64ezgoB2p4dsL5yg6hIGoQVGnPkQ",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "thesisId",
+							"value": "{{thesisId}}",
+							"type": "text"
+						},
+						{
+							"key": "feedback",
+							"value": "Feedback for thesis id {{thesisId}} has been given {{$timestamp}}",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "localhost:8000/feedback/add",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"feedback",
+						"add"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "notification-getAllNotification",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": []
+				},
+				"url": {
+					"raw": "localhost:8000/notification",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"notification"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "notification-addNotification",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "notification",
+							"value": "Notification for {{thesisId}} has been added {{$timestamp}}",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "localhost:8000/notification/add",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"notification",
+						"add"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "notification-readNotification",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "notificationId",
+							"value": "5",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "localhost:8000/notification/read",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"notification",
+						"read"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "thesisId",
+			"value": "1",
+			"type": "string"
+		},
+		{
+			"key": "studentId",
+			"value": "0521194000001",
+			"type": "string"
+		},
+		{
+			"key": "notificationId",
+			"value": "1",
+			"type": "string"
+		}
+	]
+}
