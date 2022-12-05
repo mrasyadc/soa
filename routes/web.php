@@ -28,7 +28,7 @@ Route::get('/', function () {
 });
 
 Route::get('/process', [ProcessService::class, 'start'])->name('process');
-
+Route::get('/test', [ProcessService::class, 'test']);
 
 Route::get('/thesis', [ThesisService::class, 'getAll']);
 Route::get('/thesis/{id}', [ThesisService::class, 'getById']);

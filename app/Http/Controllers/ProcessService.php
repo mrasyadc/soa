@@ -7,11 +7,19 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Http;
 use Illuminate\Support\Facades\Route;
+use GuzzleHttp\Client;
 
 class ProcessService extends Controller
 {
     public function start() {
         return view('dashboard');
+    }
+
+    public function test() {
+//        TODO: Cari cara call api from the inside server itself
+        $client = new Client(['base_uri' => 'http://localhost:8000/']);
+        $response = $client->request('GET', 'thesis');
+        @dd($response);
     }
 
     public function store(Request $request) {
