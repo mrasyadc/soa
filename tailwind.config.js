@@ -6,7 +6,14 @@ module.exports = {
         "./resources/**/*.vue",
     ],
     theme: {
+        fontFamily: {
+            sans: [
+                "Inter var, sans-serif"
+            ]
+        },
         extend: {},
     },
-    plugins: [],
+    plugins: [
+        // require('@tailwindcss/aspect-ratio')
+    ],
 };
