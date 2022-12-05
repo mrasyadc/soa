@@ -20,6 +20,7 @@ return new class extends Migration
             $table->date('dob');
             $table->string('address', 255);
             $table->string('phoneNumber', 45);
+            $table->datetime('thesisDefenseDate');
             $table->timestamps();
         });
     }

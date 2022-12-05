@@ -9,12 +9,12 @@ class Student extends Model
 {
     use HasFactory;
 
-    protected $table = 'student';
+    protected $table = 'students';
     protected $primaryKey = 'nrp';
     protected $keyType = 'string';
     public $incrementing = false;
 
     public $timestamps = true;
 
-    protected $visible = ['nrp', 'name', 'gender', 'dob', 'address', 'phoneNumber'];
+    protected $visible = ['nrp', 'name', 'gender', 'dob', 'address', 'phoneNumber', 'thesisDefenseDate'];
 }

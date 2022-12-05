@@ -2,52 +2,71 @@
 @section('title', 'Thesis Revision')
 
 @section('content')
-    <div class="bg-gray-100">
-    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <div class="mx-auto max-w-2xl py-16 sm:py-24 lg:max-w-none lg:py-32">
-            <h2 class="text-2xl font-bold text-gray-900">Collections</h2>
+    <div class="overflow-hidden bg-white shadow sm:rounded-lg">
 
-            <div class="mt-6 space-y-12 lg:grid lg:grid-cols-3 lg:gap-x-6 lg:space-y-0">
-                <div class="group relative">
-                    <div class="relative h-80 w-full overflow-hidden rounded-lg bg-white group-hover:opacity-75 sm:aspect-w-2 sm:aspect-h-1 sm:h-64 lg:aspect-w-1 lg:aspect-h-1">
-                        <img src="https://tailwindui.com/img/ecommerce-images/home-page-02-edition-01.jpg" alt="Desk with leather desk pad, walnut desk organizer, wireless keyboard and mouse, and porcelain mug." class="h-full w-full object-cover object-center">
-                    </div>
-                    <h3 class="mt-6 text-sm text-gray-500">
-                        <a href="#">
-                            <span class="absolute inset-0"></span>
-                            Desk and Office
-                        </a>
-                    </h3>
-                    <p class="text-base font-semibold text-gray-900">Work from home accessories</p>
-                </div>
+        <div class="border-t border-gray-200">
 
-                <div class="group relative">
-                    <div class="relative h-80 w-full overflow-hidden rounded-lg bg-white group-hover:opacity-75 sm:aspect-w-2 sm:aspect-h-1 sm:h-64 lg:aspect-w-1 lg:aspect-h-1">
-                        <img src="https://tailwindui.com/img/ecommerce-images/home-page-02-edition-02.jpg" alt="Wood table with porcelain mug, leather journal, brass pen, leather key ring, and a houseplant." class="h-full w-full object-cover object-center">
-                    </div>
-                    <h3 class="mt-6 text-sm text-gray-500">
-                        <a href="#">
-                            <span class="absolute inset-0"></span>
-                            Self-Improvement
-                        </a>
-                    </h3>
-                    <p class="text-base font-semibold text-gray-900">Journals and note-taking</p>
-                </div>
-
-                <div class="group relative">
-                    <div class="relative h-80 w-full overflow-hidden rounded-lg bg-white group-hover:opacity-75 sm:aspect-w-2 sm:aspect-h-1 sm:h-64 lg:aspect-w-1 lg:aspect-h-1">
-                        <img src="https://tailwindui.com/img/ecommerce-images/home-page-02-edition-03.jpg" alt="Collection of four insulated travel bottles on wooden shelf." class="h-full w-full object-cover object-center">
-                    </div>
-                    <h3 class="mt-6 text-sm text-gray-500">
-                        <a href="#">
-                            <span class="absolute inset-0"></span>
-                            Travel
-                        </a>
-                    </h3>
-                    <p class="text-base font-semibold text-gray-900">Daily commute essentials</p>
-                </div>
+            <div class="overflow-x-auto relative shadow-md sm:rounded-lg">
+                <table class="w-full text-sm text-left text-gray-500">
+                    <thead class="text-xs text-gray-700 uppercase bg-gray-50">
+                    <tr>
+                        <th scope="col" class="py-3 px-6">
+                            Product name
+                        </th>
+                        <th scope="col" class="py-3 px-6">
+                            Color
+                        </th>
+                        <th scope="col" class="py-3 px-6">
+                            Category
+                        </th>
+                        <th scope="col" class="py-3 px-6">
+                            Price
+                        </th>
+                        <th scope="col" class="py-3 px-6">
+                            Action
+                        </th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr class="bg-white border-b">
+                        <th scope="row" class="py-4 px-6 font-medium text-gray-900 whitespace-nowrap">
+                            Microsoft Surface Pro
+                        </th>
+                        <td class="py-4 px-6">
+                            White
+                        </td>
+                        <td class="py-4 px-6">
+                            Laptop PC
+                        </td>
+                        <td class="py-4 px-6">
+                            $1999
+                        </td>
+                        <td class="py-4 px-6">
+                            <a href="#" class="font-medium text-blue-600 hover:underline">Edit</a>
+                        </td>
+                    </tr>
+                    <tr class="bg-white">
+                        <th scope="row" class="py-4 px-6 font-medium text-gray-900 whitespace-nowrap">
+                            Magic Mouse 2
+                        </th>
+                        <td class="py-4 px-6">
+                            Black
+                        </td>
+                        <td class="py-4 px-6">
+                            Accessories
+                        </td>
+                        <td class="py-4 px-6">
+                            $99
+                        </td>
+                        <td class="py-4 px-6">
+                            <a href="#" class="font-medium text-blue-600 hover:underline">Edit</a>
+                        </td>
+                    </tr>
+                    </tbody>
+                </table>
             </div>
+
         </div>
     </div>
-    </div>
+
 @endsection

@@ -23,4 +23,5 @@ class Feedback extends Model
     public $timestamps = true;
 
     protected $visible = ['id', 'thesisId', 'feedback', 'created_at', 'updated_at'];
+    protected $fillable = ['thesisId', 'feedback'];
 }

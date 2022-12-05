@@ -15,4 +15,5 @@ class Notification extends Model
     public $timestamps = true;
 
     protected $visible = ['id', 'notification', 'status'];
+    protected $fillable = ['notification', 'status'];
 }

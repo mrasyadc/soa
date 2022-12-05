@@ -2,7 +2,11 @@
 
 use App\Http\Controllers\HaloService;
 use App\Http\Controllers\ProcessService;
+use App\Http\Controllers\ThesisService;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\StudentService;
+use App\Http\Controllers\FeedbackService;
+use App\Http\Controllers\NotificationService;
 
 /*
 |--------------------------------------------------------------------------
@@ -26,5 +30,16 @@ Route::get('/', function () {
 Route::get('/process', [ProcessService::class, 'start'])->name('process');
 
 
-Route::get('/halo', [HaloService::class, 'halo']);
+Route::get('/thesis', [ThesisService::class, 'getAll']);
+Route::get('/thesis/{id}', [ThesisService::class, 'getById']);
+
+Route::get('/students', [StudentService::class, 'getAll']);
+Route::get('/students/{id}', [StudentService::class, 'getById']);
+
+Route::get('/feedback/{id}', [FeedbackService::class, 'getByThesisId']);
+Route::post('/feedback/add', [FeedbackService::class, 'addFeedbackByThesisId']);
+
+Route::get('/notification', [NotificationService::class, 'getAllNotification']);
+Route::post('/notification/add', [NotificationService::class, 'addNotification']);
+Route::post('/notification/read', [NotificationService::class, 'readNotification']);
 

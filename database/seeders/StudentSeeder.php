@@ -24,7 +24,8 @@ class StudentSeeder extends Seeder
             'gender' => "M",
             'dob' => '2001-01-01',
             'address' => "Jl Raya Mastrip Kebraon 9, Jawa Timur",
-            'phoneNumber' => "081236344686"
+            'phoneNumber' => "081236344686",
+            'thesisDefenseDate' => "2023-05-05 08:00:00"
         ]);
 
         DB::table('students')->insert([
@@ -32,8 +33,9 @@ class StudentSeeder extends Seeder
             'name' => "Mufiddin Zulfa Ipna Saputra",
             'gender' => "M",
             'dob' => '2001-03-01',
-            'address' => "Jl Raya Mastrip Kebraon 69, Jawa Timur",
-            'phoneNumber' => "081546344686"
+            'address' => "Jl Raya Mantuls Kebraon 69, Jawa Timur",
+            'phoneNumber' => "081546344686",
+            'thesisDefenseDate' => "2023-05-06 08:00:00"
         ]);
     }
 }
